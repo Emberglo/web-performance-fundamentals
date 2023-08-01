@@ -1,0 +1,42 @@
+Improving First Contentful Paint
+
+    servers need to be quick
+
+        needs to be sized correctly
+
+            make sure your machine has plenty of memory, etc to handle requests
+        
+        minimal processing
+
+            don't make unnecessary database requests or data manipulation
+
+        network bandwidth
+
+            have more than enough bandwidth to process all expected requests and some extra
+
+    deliver small documents
+
+        content size
+
+            anything over 80-100k per page is too much
+
+            images should be 1mb or less
+
+        compression
+
+            turn on gzip compression
+
+            can use newer compressions like brotli
+    
+    short route through internet/network
+
+        make sure to place your servers as close to your users as possible
+
+            east coast servers to west coast customers - at least 200ms per request
+
+        use content distrobution networks (CDNs)
+
+            like cloudflare, maxCDN, etc
+
+            caches a copy of your site and serves that to users requesting it
+

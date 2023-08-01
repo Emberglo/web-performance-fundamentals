@@ -17,3 +17,58 @@ Competition
         allows you to run synthetic chrome lighthouse reports for multiple websites and compare them
 
     
+Need to gather metrics on site that needs improvement
+
+Website Analytics
+
+    bounce rate
+
+    session time
+
+
+Performance API
+
+    window.performance 
+
+        check mdn article on it
+
+    Entry Timings
+
+        an entry is one network event - one request that has happened as part of this page
+
+        performance.getEntries() or performance.getEntriesByType() or performance.getEntriesByName()
+
+            return a list of entries with a bunch of properties
+
+            properties correspond to different timings on the http request
+
+    how we gather all of our performance data programatically and aggragate it across our whole user base
+
+
+Performance Observer
+
+    how we get all the entries 
+
+    new PerformanceObserver(
+        (entryList) => {
+            var entries = entryList.getEntries();
+        }
+    ).observe(opts);
+
+    how to observe events that happen at unknown points in time
+
+    paint events, layout shift events, navigation events - all called entries
+
+    performance timings are different kinds of objects than the performance observer - different kinds of entries
+
+
+Web Vitals Library from Google will replace the code in the perf file
+
+    good way of doing performance logging on a production app
+
+
+How To Improve Performance
+
+    do fewer things
+
+    sending smaller/fewer files
