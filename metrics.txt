@@ -1,0 +1,66 @@
+where do we measure from?
+
+
+Lab Data
+
+    tools like Lighthouse
+
+    dev manchine connected directly to server
+
+    not really testing network
+
+    extensions affect data - disable your exensions when testing or run the ones most likely to be run by your users
+
+
+Synthetic Data
+
+    text servers - run window of chrome and tell you how their instance of chrome ran the sites
+
+    traditional apm tools do this - newrelic, etc
+
+    sort of tests network
+
+
+Field Data
+
+    capture data from users from their own networks
+
+    rum tools - real user monitoring tools - requestmeterics, etc
+
+    more accurate - but noisy because lots of users have bad networks and bad computers
+
+    don't care what all users see - focus on your intended audiance
+
+
+CrUX - Chrome User Experience Report
+
+    displays field data
+
+    chrome collects real user data and publishes it monthly
+
+    https://crux-compare.netlify.app/ - tool to look at this data
+
+    75% of users had the listed experience or better
+
+
+web.dev
+
+    google's site about the core vitals and how they might change over time
+
+
+Interpreting Field Data
+
+    CrUX is only coming from chrome and edge - blink based browsers
+
+    chromium is the overall browser - blink is the rendering engine - blink is where the web vitals collection happens
+
+    gives a big sample size but still biased data
+
+    all mobile data will come from android - ios doesn't contribute this data
+
+    usually measured in median (percentiles) - averages can be misleading
+
+    google cares about p75 number - shows where 75% of users have this score or better
+
+    personally - p95 gives you an idea of what your worst user sees
+
