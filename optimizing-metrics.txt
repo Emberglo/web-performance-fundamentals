@@ -40,3 +40,33 @@ Improving First Contentful Paint
 
             caches a copy of your site and serves that to users requesting it
 
+
+Improving Largest Contentful Paint
+
+    Defer Resources Until Later
+
+        lazy loading of images taht aren't necessary to main content
+
+            add loading="lazy" to img tags
+
+                doesn't work in safari / in ios
+
+                build a lazy loader with JS instead
+
+        don't load unnecessary javascript or css files
+
+        add async on script tags to allow the browser to do it later - doesn't really work too well
+
+        add defer on script tags - allows file to load but doesn't execute until after the load event - won't block other things from loading
+
+        change the order things happen in HTML
+
+            move analytics or enhancement scripts to the end of the document
+
+    Optimize Images
+
+        use srcset to require smaller images depending on certain rules
+
+            <img src="picture-1200.jpg" srcset="picture-600.jpg 600w, picture-900.jpg 900w, picture-1200.jpg 1200w">
+
+    Reduce Request Overhead
