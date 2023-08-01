@@ -1,0 +1,80 @@
+Why is performance important?
+
+more performant sites/apps have better conversion rates and better revenue
+
+#1 reason - Google says so - including performance in search rankings
+
+#2 - angry and frustrated users don't stick around long - lose sales, etc
+
+Percieved performance - if people expect things to take a certain amount of time - as long as its in the expect time, it's not so bad
+
+Psychology of Waiting
+1 - People want to get started with what they're there for
+2 - Bored waits feel slower
+3 - Anxious waits feel slower
+4 - Unexplained waits feel slower
+5 - Uncertain waits feel slower
+6 - People will wait for value
+
+The old way to measure performance: page load time
+    things like lazy loading tricked this and made it useless
+
+The new way: Web Vitals
+
+4 different metrics - Core Web Vitals
+1 - First Contentful Paint
+2 - Largest Contentful Paint
+3 - Cumulative Layout Shift
+4 - First Input Delay
+
+
+First Contentful Paint
+
+respond quickly
+
+from link click/url entered to the first content loads (ie: header bar)
+
+time until the user seeds an indication that the page is loading
+
+
+Largest Contentful Paint
+
+get to the point
+
+generally images cover the most area - so these are what end up getting measured
+
+time until the user sees most the page and believes it is ready or almost ready
+
+
+Cumulative Layout Shift
+
+don't move stuff around after load
+
+the total movement distance and impact of page elements during the entire lifetime of the document that the user sees
+
+ie: ads or images loading and causing content to move around
+
+have to be careful of this one with single page applications
+
+
+First Input Delay
+
+dont load too much stuff
+
+how much of a delay between the page looking ready to use and when the first click handler can fire
+
+the browser time delay between the users first click and the execution of applicable code
+
+
+
+Lighthouse
+
+in dev tools
+
+move dev tools out of the window so you can have a normal size chrome window open
+
+simulated throttling generally cuts your device speed in about half to replicated average machines
+
+report is relative to your machine, network connection, chrome window size, and application priority
+
+
