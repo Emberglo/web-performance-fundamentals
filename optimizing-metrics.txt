@@ -65,8 +65,57 @@ Improving Largest Contentful Paint
 
     Optimize Images
 
-        use srcset to require smaller images depending on certain rules
+        use srcset to require smaller images depending on screen size rules as specified in the sizes tag
 
-            <img src="picture-1200.jpg" srcset="picture-600.jpg 600w, picture-900.jpg 900w, picture-1200.jpg 1200w">
+            <img src="picture-1200.jpg" srcset="picture-600.jpg 600w, picture-900.jpg 900w, picture-1200.jpg 1200w" sizes="(max-width: 600px) 600px, (max-width: 900px) 900px, 1200px />
 
     Reduce Request Overhead
+
+        implement HTTP2
+
+            supported on many webservers like ngnx and apache
+
+            can reuse connections - don't have to do a TCP connection or SSL handshake for every request
+
+            requires local ssl certificate - difficult to set up
+
+        cache requests
+
+            request headers can specify how long to hold on to the response of a request
+
+                cache-control, expires, etag - options to turn on in requests
+
+        preloading
+
+            can preload certain requests like fonts and css imports
+
+            we can tell the browser to get it right away
+
+            preconnect and preload
+
+                <link rel="preconnect" href="google font link here" />
+
+                <link rel="preload" href="link to dependency - /icons.css" />
+
+
+Improving Cumulative Layout Shift
+
+    delaying things to improve largest contentful paint often makes cumulative layout shift worse
+
+    layout shift prior to lcp is ok, but after is frustrating for users
+
+    specify the size of boxes before load so the browser plans for them
+
+    cls continues increasing after page load due to lazy loading of images
+
+        adding size/height/width will help reduce this
+
+    
+Improving First Input Delay
+
+    moving too much stuff after largest contentful paint make browser seem laggy - frustrating
+
+    if this is an issue - you're probably pushing too much javascript/content for the value you're providing to your users
+
+
+Sell these improvements by emphasising improvement in session time and falling bounce rates
