@@ -1,0 +1,38 @@
+If you make a site fast from the beginning it's hard to make it slow later
+
+Make performance a team value up front
+    
+   similar to security and quality - have to plan it ahead and do it through the whole process
+
+    test perf early, test perf often, always monitor perf
+
+Setting your goals
+
+    1 - who are your users
+
+    2 - what devices do they have
+
+    3 - how long will they wait for content
+
+    4 - how fast would impress
+
+    my site should load in _______ seconds on a _____________ connection
+
+    http://performancebudget.io
+
+
+Performance Scenarios
+
+    Marketing adds 3rd party stuff to site/app
+
+        need to use data to advocate for performance
+
+        look at data like revenue per day and # of checkouts per day and see how it correlates to performance
+
+    Designing a new web app
+
+        understand business objectives
+
+            sales, gathering data, providing a service, etc
+
+        build in buffer for necessary or future code/libraries/etc
